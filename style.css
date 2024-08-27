@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+
+/* import font that we are using */
+/* step-1 reset universal selector*/
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+img 
+{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Reset stages completed */
+
+/* Utility classes */
+
+.nowrap
+{
+    white-space: nowrap;
+}
+
+/* general styles starts from html,body,footer by semantic ways*/
+
+html 
+{
+    /* scroll navigate from one card to another by smooth */
+    scroll-behavior: smooth;
+}
+
+body
+{
+    font: 1.5rem "Nunito",sans-serif;
+    min-height: 100vh;
+    background-color: #475569;
+    background-image:radial-gradient(whitesmoke,#475569);
+    display: flex;
+    flex-direction: column;
+}
+
+header,footer 
+{
+    position: sticky;
+    background-color: #1e293b;
+    color: whitesmoke;
+    text-align: center;
+}
+
+header
+{
+    top: 0;
+}
+nav 
+{
+    background-color: whitesmoke;
+    padding: .5rem;
+    border-bottom: 2px solid black;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-evenly;
+}
+nav a 
+{
+    color: rgb(0, 0, 0);
+}
+nav a:hover,a:focus
+{
+    color: rgba(0,0,0,0.5);
+}
+/* nav a:visited
+{
+    color: rgba(0, 0, 255,0.5);
+} */
+main
+{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+/* profile cards */
+
+.card
+{
+    scroll-margin-top:8rem;
+    width: min(350px,100%);
+    border: 2px solid black;
+    background-color: #cbd5e1;
+    padding: 1rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+.card figure 
+{
+    display: flex;
+    /* flex-direction: column; */
+    /* flex flow says flex direction and flex wrap */
+    flex-flow: column nowrap;
+}
+
+.card figcaption,p
+{
+    font-weight: bolder;
+    font-size: 1.5rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+.card img 
+{
+    border: 5px double black;
+    border-radius: 50%;
+}
+
+footer
+{
+    bottom: 0;
+}
+
+    @media screen and (min-width:992px) {
+        .card 
+        {
+            width: min(100%,400px);
+            /* height: min(100%,400px); */
+        }
+        main 
+        {
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    
+    }
+
+
